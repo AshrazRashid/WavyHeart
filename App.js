@@ -139,7 +139,7 @@ export default class App extends Component {
             />}
 
             {percentage == 60 && <Animated.Image
-              source={require('./AnimateLayers/Layer6.png')}
+              source={require('./Layer6/Layer6.png')}
               style={{
                 transform: [
                   {
@@ -156,7 +156,7 @@ export default class App extends Component {
 
             {percentage == 70 &&
               <Animated.Image
-                source={require('./AnimateLayers/Layer7.png')}
+                source={require('./Layer7/Layer7.png')}
                 style={{
                   transform: [
                     {
@@ -171,7 +171,7 @@ export default class App extends Component {
 
             {percentage == 80 &&
               <Animated.Image
-                source={require('./AnimateLayers/Layer8.png')}
+                source={require('./Layer8/Layer8.png')}
                 style={{
                   transform: [
                     {
@@ -186,7 +186,7 @@ export default class App extends Component {
               />}
 
             {percentage == 90 && <Animated.Image
-              source={require('./AnimateLayers/Layer9.png')}
+              source={require('./Layer9/Layer9.png')}
               style={{
                 transform: [
                   {
@@ -202,7 +202,7 @@ export default class App extends Component {
 
 
             {percentage == 100 && <Animated.Image
-              source={require('./AnimateLayers/Layer10.png')}
+              source={require('./Layer10/Layer10.png')}
               style={{
                 transform: [
                   {
@@ -242,10 +242,7 @@ const styles = StyleSheet.create({
     borderRadius: 6
   },
   text: {
-
-
     position: 'absolute',
-
     // top: 20,
     marginVertical: 25,
     fontSize: 26,
