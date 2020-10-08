@@ -39,19 +39,19 @@ class HeartProgress extends Component {
         <Animated.Image
           source={Layers.layer1}
           resizeMode={'contain'}
-          style={{
-            position: 'absolute',
-            width: utility.widthRatio(120),
-            height: utility.widthRatio(170),
-            transform: [
-              {
-                translateY: startValue.interpolate({
-                  inputRange: [0, 1],
-                  outputRange: [100, value + 5],
-                }),
-              },
-            ],
-          }}
+          style={[
+            styles.imgStyle,
+            {
+              transform: [
+                {
+                  translateY: startValue.interpolate({
+                    inputRange: [0, 1],
+                    outputRange: [100, value + 5],
+                  }),
+                },
+              ],
+            },
+          ]}
         />
       );
     } else if (percentage <= 20) {
@@ -59,19 +59,19 @@ class HeartProgress extends Component {
         <Animated.Image
           source={Layers.layer2}
           resizeMode={'contain'}
-          style={{
-            position: 'absolute',
-            width: utility.widthRatio(120),
-            height: utility.widthRatio(170),
-            transform: [
-              {
-                translateY: startValue.interpolate({
-                  inputRange: [0, 1],
-                  outputRange: [100, value],
-                }),
-              },
-            ],
-          }}
+          style={[
+            styles.imgStyle,
+            {
+              transform: [
+                {
+                  translateY: startValue.interpolate({
+                    inputRange: [0, 1],
+                    outputRange: [100, value],
+                  }),
+                },
+              ],
+            },
+          ]}
         />
       );
     } else if (percentage <= 30) {
@@ -79,19 +79,19 @@ class HeartProgress extends Component {
         <Animated.Image
           source={Layers.layer3}
           resizeMode={'contain'}
-          style={{
-            position: 'absolute',
-            width: utility.widthRatio(120),
-            height: utility.widthRatio(170),
-            transform: [
-              {
-                translateY: startValue.interpolate({
-                  inputRange: [0, 1],
-                  outputRange: [100, value],
-                }),
-              },
-            ],
-          }}
+          style={[
+            styles.imgStyle,
+            {
+              transform: [
+                {
+                  translateY: startValue.interpolate({
+                    inputRange: [0, 1],
+                    outputRange: [100, value],
+                  }),
+                },
+              ],
+            },
+          ]}
         />
       );
     } else if (percentage <= 40) {
@@ -99,19 +99,19 @@ class HeartProgress extends Component {
         <Animated.Image
           source={Layers.layer4}
           resizeMode={'contain'}
-          style={{
-            position: 'absolute',
-            width: utility.widthRatio(120),
-            height: utility.widthRatio(170),
-            transform: [
-              {
-                translateY: startValue.interpolate({
-                  inputRange: [0, 1],
-                  outputRange: [100, value],
-                }),
-              },
-            ],
-          }}
+          style={[
+            styles.imgStyle,
+            {
+              transform: [
+                {
+                  translateY: startValue.interpolate({
+                    inputRange: [0, 1],
+                    outputRange: [100, value],
+                  }),
+                },
+              ],
+            },
+          ]}
         />
       );
     } else if (percentage <= 50) {
@@ -119,19 +119,19 @@ class HeartProgress extends Component {
         <Animated.Image
           source={Layers.layer5}
           resizeMode={'contain'}
-          style={{
-            position: 'absolute',
-            width: utility.widthRatio(120),
-            height: utility.widthRatio(170),
-            transform: [
-              {
-                translateY: startValue.interpolate({
-                  inputRange: [0, 1],
-                  outputRange: [100, value],
-                }),
-              },
-            ],
-          }}
+          style={[
+            styles.imgStyle,
+            {
+              transform: [
+                {
+                  translateY: startValue.interpolate({
+                    inputRange: [0, 1],
+                    outputRange: [100, value],
+                  }),
+                },
+              ],
+            },
+          ]}
         />
       );
     } else if (percentage <= 60) {
@@ -139,19 +139,19 @@ class HeartProgress extends Component {
         <Animated.Image
           source={Layers.layer6}
           resizeMode={'contain'}
-          style={{
-            position: 'absolute',
-            width: utility.widthRatio(120),
-            height: utility.widthRatio(170),
-            transform: [
-              {
-                translateY: startValue.interpolate({
-                  inputRange: [0, 1],
-                  outputRange: [100, value - 10],
-                }),
-              },
-            ],
-          }}
+          style={[
+            styles.imgStyle,
+            {
+              transform: [
+                {
+                  translateY: startValue.interpolate({
+                    inputRange: [0, 1],
+                    outputRange: [100, value - 10],
+                  }),
+                },
+              ],
+            },
+          ]}
         />
       );
     } else if (percentage <= 70) {
@@ -159,19 +159,19 @@ class HeartProgress extends Component {
         <Animated.Image
           source={Layers.layer7}
           resizeMode={'contain'}
-          style={{
-            position: 'absolute',
-            width: utility.widthRatio(120),
-            height: utility.widthRatio(170),
-            transform: [
-              {
-                translateY: startValue.interpolate({
-                  inputRange: [0, 1],
-                  outputRange: [100, value - 10],
-                }),
-              },
-            ],
-          }}
+          style={[
+            styles.imgStyle,
+            {
+              transform: [
+                {
+                  translateY: startValue.interpolate({
+                    inputRange: [0, 1],
+                    outputRange: [100, value - 10],
+                  }),
+                },
+              ],
+            },
+          ]}
         />
       );
     } else if (percentage <= 80) {
@@ -179,19 +179,19 @@ class HeartProgress extends Component {
         <Animated.Image
           source={Layers.layer8}
           resizeMode={'contain'}
-          style={{
-            position: 'absolute',
-            width: utility.widthRatio(120),
-            height: utility.widthRatio(170),
-            transform: [
-              {
-                translateY: startValue.interpolate({
-                  inputRange: [0, 1],
-                  outputRange: [100, value - 10],
-                }),
-              },
-            ],
-          }}
+          style={[
+            styles.imgStyle,
+            {
+              transform: [
+                {
+                  translateY: startValue.interpolate({
+                    inputRange: [0, 1],
+                    outputRange: [100, value - 10],
+                  }),
+                },
+              ],
+            },
+          ]}
         />
       );
     } else if (percentage <= 90) {
@@ -199,19 +199,19 @@ class HeartProgress extends Component {
         <Animated.Image
           source={Layers.layer9}
           resizeMode={'contain'}
-          style={{
-            position: 'absolute',
-            width: utility.widthRatio(100),
-            height: utility.widthRatio(170),
-            transform: [
-              {
-                translateY: startValue.interpolate({
-                  inputRange: [0, 1],
-                  outputRange: [100, value - 20],
-                }),
-              },
-            ],
-          }}
+          style={[
+            styles.imgStyle,
+            {
+              transform: [
+                {
+                  translateY: startValue.interpolate({
+                    inputRange: [0, 1],
+                    outputRange: [100, value - 20],
+                  }),
+                },
+              ],
+            },
+          ]}
         />
       );
     } else if (percentage <= 100) {
@@ -219,19 +219,19 @@ class HeartProgress extends Component {
         <Animated.Image
           source={Layers.layer10}
           resizeMode={'contain'}
-          style={{
-            position: 'absolute',
-            width: utility.widthRatio(100),
-            height: utility.widthRatio(170),
-            transform: [
-              {
-                translateY: startValue.interpolate({
-                  inputRange: [0, 1],
-                  outputRange: [100, value - 38],
-                }),
-              },
-            ],
-          }}
+          style={[
+            styles.imgStyle,
+            {
+              transform: [
+                {
+                  translateY: startValue.interpolate({
+                    inputRange: [0, 1],
+                    outputRange: [100, value - 38],
+                  }),
+                },
+              ],
+            },
+          ]}
         />
       );
     }
@@ -247,8 +247,11 @@ class HeartProgress extends Component {
             resizeMode={'contain'}
             style={{
               position: 'absolute',
-              width: utility.widthRatio(120),
-              height: utility.widthRatio(200),
+              // width: utility.widthRatio(120),
+              // height: utility.widthRatio(200),
+
+              width: 120,
+              height: 200,
             }}
             source={Layers.layer0}
           />
@@ -274,9 +277,17 @@ const styles = StyleSheet.create({
   container: {
     height: 170,
     width: 120,
-    marginHorizontal: utility.smallMargin,
+    marginHorizontal: 8,
     alignItems: 'center',
     justifyContent: 'center',
+  },
+
+  imgStyle: {
+    position: 'absolute',
+    // width: utility.widthRatio(100),
+    // height: utility.widthRatio(170),
+    width: 100,
+    height: 170,
   },
   subContainer: {
     justifyContent: 'center',
@@ -285,7 +296,7 @@ const styles = StyleSheet.create({
   },
   text: {
     position: 'absolute',
-    fontSize: 26,
+    fontSize: 12,
     color: '#000',
     fontWeight: 'bold',
     textAlign: 'center',

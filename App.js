@@ -6,7 +6,7 @@ export default class App extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <HeartProgress Username={'Test User'} percentage={65} />
+        <HeartProgress Username={'Test User'} percentage={10} />
       </View>
     );
   }
