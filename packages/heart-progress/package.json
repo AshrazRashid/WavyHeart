@@ -1,0 +1,28 @@
+{
+  "name": "@wavyheart/heart-progress",
+  "version": "1.0.0",
+  "description": "A customizable animated heart progress component for React Native.",
+  "main": "src/index.js",
+  "types": "src/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/wavyheart.git"
+  },
+  "author": "Your Name <your.email@example.com>",
+  "license": "MIT",
+  "keywords": [
+    "react-native",
+    "heart",
+    "progress",
+    "animated",
+    "svg"
+  ],
+  "peerDependencies": {
+    "react": ">=17.0.0",
+    "react-native": ">=0.64.0",
+    "react-native-svg": ">=12.0.0"
+  },
+  "files": [
+    "dist"
+  ]
+}
