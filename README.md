@@ -67,3 +67,5 @@ import HeartProgress from "@wavyheart/heart-progress";
 ## License
 
 MIT
+
+![Demo](./demo.gif)
