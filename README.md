@@ -20,6 +20,8 @@ import HeartProgress from "@wavyheart/heart-progress";
 <HeartProgress percentage={75} size={150} Username="John Doe" />;
 ```
 
+![Demo](./demo.gif)
+
 ## Props
 
 | Prop             | Type             | Default                | Description                               |
@@ -67,5 +69,3 @@ import HeartProgress from "@wavyheart/heart-progress";
 ## License
 
 MIT
-
-![Demo](./demo.gif)
