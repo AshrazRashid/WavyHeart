@@ -5,7 +5,7 @@ import HeartProgress from './components/HeartProgress'; // Adjust path if needed
 export default function App() {
   return (
     <View style={styles.container}>
-      <HeartProgress Username="Test User" percentage={50} />
+      <HeartProgress Username="John Doe" percentage={50} />
     </View>
   );
 }

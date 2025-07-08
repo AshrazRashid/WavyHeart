@@ -1,5 +1,5 @@
-import React, { useRef, useEffect, useState } from 'react';
-import { View, Text, StyleSheet, Animated, Easing } from 'react-native';
+import React, { useRef, useEffect, useState } from "react";
+import { View, Text, StyleSheet, Animated, Easing } from "react-native";
 import Svg, {
   Path,
   Defs,
@@ -7,7 +7,7 @@ import Svg, {
   G,
   LinearGradient,
   Stop,
-} from 'react-native-svg';
+} from "react-native-svg";
 
 const WAVE_WIDTH = 120;
 const WAVE_HEIGHT = 20;
@@ -29,12 +29,12 @@ function getWavePath(phase, fillPercent) {
 const HeartProgress = ({
   percentage = 50,
   size = 120,
-  Username = '',
-  gradientColors = ['#ff6b6b', '#e63946'],
-  backgroundColor = '#eee',
+  Username = "",
+  gradientColors = ["#ff6b6b", "#e63946"],
+  backgroundColor = "#eee",
   waveAmplitude = 8,
   waveSpeed = 2000,
-  textColor = '#000',
+  textColor = "#000",
   fontSize = 16,
   usernameFontSize = 18,
   showPercentage = true,
@@ -54,7 +54,7 @@ const HeartProgress = ({
         duration: waveSpeed,
         easing: Easing.linear,
         useNativeDriver: false,
-      }),
+      })
     );
     anim.start();
 
@@ -82,76 +82,72 @@ const HeartProgress = ({
     <View
       style={[styles.container, { width: size, height: size * 1.1 }, style]}
     >
-      <View style={{ alignItems: 'center', justifyContent: 'center' }}>
-        <Svg width={size} height={size * 1.1} viewBox="0 0 120 110">
-          <Defs>
-            <ClipPath id="heartClip">
-              <Path d="M60 100 C 20 70, 0 40, 30 25 A 25 25 0 0 1 60 40 A 25 25 0 0 1 90 25 C 120 40, 100 70, 60 100 Z" />
-            </ClipPath>
-            <LinearGradient id="heartGradient" x1="0" y1="0" x2="0" y2="1">
-              <Stop offset="0%" stopColor={gradientColors[0]} stopOpacity="1" />
-              <Stop
-                offset="100%"
-                stopColor={gradientColors[1]}
-                stopOpacity="1"
-              />
-            </LinearGradient>
-          </Defs>
-          {/* Heart background */}
+      <Svg width={size} height={size * 1.1} viewBox="0 0 120 110">
+        <Defs>
+          <ClipPath id="heartClip">
+            <Path d="M60 100 C 20 70, 0 40, 30 25 A 25 25 0 0 1 60 40 A 25 25 0 0 1 90 25 C 120 40, 100 70, 60 100 Z" />
+          </ClipPath>
+          <LinearGradient id="heartGradient" x1="0" y1="0" x2="0" y2="1">
+            <Stop offset="0%" stopColor={gradientColors[0]} stopOpacity="1" />
+            <Stop offset="100%" stopColor={gradientColors[1]} stopOpacity="1" />
+          </LinearGradient>
+        </Defs>
+        {/* Heart background */}
+        <Path
+          d="M60 100 C 20 70, 0 40, 30 25 A 25 25 0 0 1 60 40 A 25 25 0 0 1 90 25 C 120 40, 100 70, 60 100 Z"
+          fill={backgroundColor}
+        />
+        {/* Animated wave fill */}
+        <G clipPath="url(#heartClip)">
           <Path
-            d="M60 100 C 20 70, 0 40, 30 25 A 25 25 0 0 1 60 40 A 25 25 0 0 1 90 25 C 120 40, 100 70, 60 100 Z"
-            fill={backgroundColor}
+            d={getWavePath(phase, fillPercent)}
+            fill="url(#heartGradient)"
+            opacity={0.9}
           />
-          {/* Animated wave fill */}
-          <G clipPath="url(#heartClip)">
-            <Path
-              d={getWavePath(phase, fillPercent)}
-              fill="url(#heartGradient)"
-              opacity={0.9}
-            />
-          </G>
-        </Svg>
+        </G>
+      </Svg>
+      <View style={styles.textContainer}>
+        {showUsername && (
+          <Text
+            style={[
+              styles.username,
+              { color: textColor, fontSize: usernameFontSize },
+            ]}
+          >
+            {Username}
+          </Text>
+        )}
         {showPercentage && (
-          <Text style={[styles.text, { color: textColor, fontSize }]}>
-            {pct} %
+          <Text style={[styles.percentage, { color: textColor, fontSize }]}>
+            {pct}%
           </Text>
         )}
       </View>
-      {showUsername && (
-        <Text
-          style={[
-            styles.username,
-            { color: textColor, fontSize: usernameFontSize },
-          ]}
-        >
-          {Username}
-        </Text>
-      )}
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    marginHorizontal: 8,
-    alignItems: 'center',
-    justifyContent: 'center',
+    position: "relative",
+    alignItems: "center",
+    justifyContent: "center",
   },
-  text: {
-    position: 'absolute',
-    fontSize: 16,
-    color: '#000',
-    fontWeight: 'bold',
-    textAlign: 'center',
-    top: '40%',
-    width: '100%',
+  textContainer: {
+    position: "absolute",
+    top: "50%",
+    transform: [{ translateY: -10 }],
+    alignItems: "center",
   },
   username: {
-    position: 'absolute',
-    bottom: 0,
-    textAlign: 'center',
     fontSize: 18,
-    width: '100%',
+    fontWeight: "bold",
+    color: "#333",
+  },
+  percentage: {
+    fontSize: 24,
+    fontWeight: "bold",
+    color: "#FF6B6B",
   },
 });
 
