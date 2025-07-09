@@ -66,6 +66,10 @@ import HeartProgress from "@wavyheart/heart-progress";
 />
 ```
 
+## Read More
+
+[Introducing Heart Progress: A Stylish Wavy Heart-Shaped Progress Indicator for React Native (Medium Article)](https://medium.com/@ashraz.developer/introducing-heart-progress-a-stylish-wavy-heart-shaped-progress-indicator-for-react-native-72593e783539)
+
 ## License
 
 MIT

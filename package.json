@@ -1,5 +1,5 @@
 {
-  "name": "@wavyheart/heart-progress",
+  "name": "heart-progress",
   "version": "1.0.0",
   "description": "A customizable animated heart progress component for React Native.",
   "main": "src/index.js",
